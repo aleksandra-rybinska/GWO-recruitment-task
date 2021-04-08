@@ -1,7 +1,9 @@
 import "../../src/index.css";
+import { useBooks } from "../AppContext";
 import styles from "./Book.module.css";
 
 const Book = ({ book }) => {
+  const { addToCart } = useBooks();
   return (
     <div className={styles.bookContainer}>
       <img className={styles.img} src={book.cover_url} alt={book.title} />
@@ -12,7 +14,14 @@ const Book = ({ book }) => {
       <p className={styles.price}>
         Cena: {(book.price / 100).toFixed(2)} {book.currency}
       </p>
-      <button className={styles.btn}>Dodaj do koszyka</button>
+      <button
+        onClick={() => {
+          addToCart(book);
+        }}
+        className={styles.btn}
+      >
+        Dodaj do koszyka
+      </button>
     </div>
   );
 };
