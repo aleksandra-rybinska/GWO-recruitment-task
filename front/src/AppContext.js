@@ -30,6 +30,7 @@ export const AppProvider = ({ children }) => {
     books: data?.data || [],
     status,
     addToCart,
+    cart,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

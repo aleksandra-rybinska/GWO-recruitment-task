@@ -1,0 +1,121 @@
+.content {
+  display: grid;
+  grid-template-columns: 0.8fr 2fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "img description buttons"
+    "img description price"
+    "img description removeBtn";
+  gap: 10px 15px;
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 2px solid #ccc;
+
+  background: #fff;
+}
+.img {
+  grid-area: img;
+  align-self: center;
+  justify-self: flex-end;
+  height: auto;
+  width: 70%;
+}
+.description {
+  grid-area: description;
+}
+.description p {
+  padding-top: 7px;
+}
+.amountBtnContainer {
+  grid-area: buttons;
+  display: flex;
+  align-items: baseline;
+  align-self: flex-end;
+  justify-self: center;
+  gap: 10px;
+}
+.amountBtnContainer p {
+  margin: 0 10px;
+  font-size: 18px;
+}
+.amountBtn {
+  padding: 2px 15px;
+  color: #194162;
+  background: #fff;
+  border: 1px solid #194162;
+  border-radius: 2px;
+  font-size: 18px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.amountBtn:hover {
+  color: #fff;
+  background: #194162;
+  border: 1px solid #fff;
+}
+.price {
+  grid-area: price;
+  align-self: center;
+  justify-self: center;
+}
+.removeBtn {
+  grid-area: removeBtn;
+  justify-self: center;
+  align-self: center;
+  width: 215px;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  background-image: linear-gradient(
+    to left,
+    #750413,
+    #cf0437,
+    #f30129,
+    #dd1818
+  );
+  box-shadow: 0 3px 10px rgba(242, 97, 103, 0.3);
+  background-size: 300% 100%;
+  border-radius: 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.removeBtn:hover {
+  background-position: 100% 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 680px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content;
+    grid-template-areas:
+      "description buttons"
+      "description price"
+      "description img"
+      "removeBtn removeBtn";
+    margin: 0;
+    padding: 10px;
+  }
+  .img {
+    max-height: 100px;
+    width: auto;
+    justify-self: center;
+  }
+  .amountBtns {
+    justify-content: center;
+  }
+  .price {
+    justify-self: center;
+  }
+  .removeBtn {
+    justify-self: center;
+    min-width: 80%;
+  }
+}

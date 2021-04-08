@@ -14,12 +14,7 @@ const Book = ({ book }) => {
       <p className={styles.price}>
         Cena: {(book.price / 100).toFixed(2)} {book.currency}
       </p>
-      <button
-        onClick={() => {
-          addToCart(book);
-        }}
-        className={styles.btn}
-      >
+      <button onClick={() => addToCart(book)} className={styles.btn}>
         Dodaj do koszyka
       </button>
     </div>
