@@ -1,0 +1,81 @@
+.bookContainer {
+  display: grid;
+  grid-template-columns: 1.2fr 2.5fr;
+  grid-template-rows: 1.8fr 1fr 0.5fr 0.5fr 1.5fr;
+  grid-template-areas:
+    "img title"
+    "img author"
+    "img pages"
+    "img price"
+    "img btn";
+  gap: 5px;
+  padding: 5px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 1px 3px 10px 0px rgba(50, 50, 69, 0.21);
+}
+h3 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+.img {
+  grid-area: img;
+  align-self: center;
+  justify-self: center;
+  max-height: 190px;
+  width: auto;
+}
+.title {
+  grid-area: title;
+}
+.author {
+  grid-area: author;
+}
+.pages {
+  grid-area: pages;
+}
+.price {
+  grid-area: price;
+}
+
+.btn {
+  grid-area: btn;
+  justify-self: center;
+  align-self: center;
+  width: 215px;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  background-image: linear-gradient(
+    to left,
+    #750413,
+    #cf0437,
+    #f30129,
+    #dd1818
+  );
+  box-shadow: 0 3px 10px rgba(242, 97, 103, 0.3);
+  background-size: 300% 100%;
+  border-radius: 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.btn:hover {
+  background-position: 100% 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 680px) {
+  .btnAddToCard {
+    font-size: 14px;
+  }
+  .img {
+    max-height: 140px;
+  }
+}
