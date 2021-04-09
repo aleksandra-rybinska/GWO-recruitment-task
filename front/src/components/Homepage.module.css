@@ -9,3 +9,11 @@
   background: #fff;
   box-shadow: 1px 3px 10px 0px rgba(50, 50, 69, 0.21);
 }
+
+@media screen and (max-width: 680px) {
+  .header {
+    flex-flow: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

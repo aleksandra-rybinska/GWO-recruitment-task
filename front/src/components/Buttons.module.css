@@ -29,6 +29,7 @@
 }
 .navBtn {
   position: relative;
+  margin: 10px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,13 +69,9 @@
   border-radius: 20px;
 }
 @media screen and (max-width: 680px) {
-  .badge {
-    top: -9px;
-    right: 3px;
-    padding: 4px 8px;
-  }
   .redBtn {
     justify-self: center;
     width: 90%;
+    font-size: 14px;
   }
 }
