@@ -3,7 +3,7 @@ import styles from "./CartBook.module.css";
 import buttons from "./Buttons.module.css";
 
 const CartBook = ({ book }) => {
-  const { addToCart } = useBooks();
+  const { addToCart, removeFromCart, removeOneFromCart } = useBooks();
 
   return (
     <div className={styles.content}>
@@ -17,17 +17,26 @@ const CartBook = ({ book }) => {
         </p>
       </div>
       <div className={styles.amountBtnContainer}>
-        <button className={styles.amountBtn} disabled={book.quantity <= 1}>
+        <button
+          className={styles.amountBtn}
+          onClick={() => removeOneFromCart(book.id)}
+          disabled={book.quantity <= 1}
+        >
           -
         </button>
         <p>{book.quantity}</p>
-        <button className={styles.amountBtn}>+</button>
+        <button className={styles.amountBtn} onClick={() => addToCart(book)}>
+          +
+        </button>
       </div>
       <p className={styles.price}>
         Łącznie: {((book.quantity * book.price) / 100).toFixed(2)}{" "}
         {book.currency}
       </p>
-      <button className={(styles.removeBtn, buttons.redBtn)}>
+      <button
+        className={(styles.removeBtn, buttons.redBtn)}
+        onClick={() => removeFromCart(book.id)}
+      >
         usuń produkt
       </button>
     </div>

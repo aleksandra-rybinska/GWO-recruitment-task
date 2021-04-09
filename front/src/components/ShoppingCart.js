@@ -7,8 +7,6 @@ import buttons from "./Buttons.module.css";
 
 const ShoppingCart = () => {
   const { books, cart } = useBooks();
-  console.log("shoppingCart books", books);
-
   return (
     <div className={styles.content}>
       <div className={styles.header}>

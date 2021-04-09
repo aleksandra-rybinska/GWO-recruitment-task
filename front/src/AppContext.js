@@ -23,7 +23,31 @@ export const AppProvider = ({ children }) => {
       }
       return [...old, { ...clickedBook, quantity: 1 }];
     });
-    console.log(cart);
+  };
+
+  const removeFromCart = (id) => {
+    setCart((old) =>
+      old.reduce((acc, book) => {
+        if (book.id === id) {
+          return [...acc];
+        } else {
+          return [...acc, book];
+        }
+      }, [])
+    );
+  };
+
+  const removeOneFromCart = (id) => {
+    setCart((old) =>
+      old.reduce((acc, book) => {
+        if (book.id === id) {
+          if (book.quantity === 1) return acc;
+          return [...acc, { ...book, quantity: book.quantity - 1 }];
+        } else {
+          return [...acc, book];
+        }
+      }, [])
+    );
   };
 
   const value = {
@@ -31,6 +55,8 @@ export const AppProvider = ({ children }) => {
     status,
     addToCart,
     cart,
+    removeFromCart,
+    removeOneFromCart,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
