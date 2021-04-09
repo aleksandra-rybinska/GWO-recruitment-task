@@ -1,0 +1,13 @@
+.container {
+  position: sticky;
+  top: 109px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px 20px 20px;
+  align-items: center;
+  background: #fff;
+  box-shadow: 1px 2px 8px 0px rgba(50, 50, 69, 0.21);
+}
+.container h2 {
+  margin-top: 5px;
+}
