@@ -18,7 +18,7 @@ const OrderForm = () => {
     first_name: (value) => value.length > 2,
     last_name: (value) => value.length > 2,
     city: (value) => value.length > 2,
-    zip_code: (value) => value.length === 6 && value.indexOf("-") == 2,
+    zip_code: (value) => value.length === 6 && value.indexOf("-") === 2,
   };
 
   const updateField = (e) => {
@@ -50,10 +50,16 @@ const OrderForm = () => {
       console.log("error");
       return;
     }
-    console.log("submited", {
-      ...form,
-      order: cart.map(({ id, quantity }) => ({ id, quantity })),
+
+    fetch("http://localhost:3001/api/order", {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify({
+        ...form,
+        order: cart.map(({ id, quantity }) => ({ id, quantity })),
+      }),
     });
+
     alert("zamówienie przyjęte do realizacji");
   };
 
