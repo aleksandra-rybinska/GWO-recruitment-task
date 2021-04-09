@@ -88,8 +88,4 @@
   .price {
     justify-self: center;
   }
-  .removeBtn {
-    justify-self: center;
-    min-width: 80%;
-  }
 }

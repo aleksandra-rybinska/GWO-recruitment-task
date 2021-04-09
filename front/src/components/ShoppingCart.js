@@ -6,10 +6,10 @@ import styles from "./ShoppingCart.module.css";
 import buttons from "./Buttons.module.css";
 
 const ShoppingCart = () => {
-  const { books, cart } = useBooks();
+  const { cart } = useBooks();
 
   return (
-    <div className={styles.content}>
+    <div>
       <div className={styles.header}>
         <h1>Koszyk</h1>
         <Link className={buttons.navBtn} to="/">

@@ -45,9 +45,6 @@
 }
 
 @media screen and (max-width: 680px) {
-  .btnAddToCard {
-    font-size: 14px;
-  }
   .img {
     max-height: 140px;
   }

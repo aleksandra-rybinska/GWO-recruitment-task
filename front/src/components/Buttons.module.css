@@ -27,8 +27,8 @@
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-
 .navBtn {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +46,7 @@
     #0142f3,
     #1892dd
   );
-  box-shadow: 0 3px 10px rgba(242, 97, 103, 0.3);
+  box-shadow: 0 3px 10px rgba(107, 97, 242, 0.3);
   background-size: 500% 100%;
   border-radius: 20px;
   -webkit-transition: all 0.4s ease-in-out;
@@ -57,4 +57,24 @@
   background-position: 100% 0;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+}
+
+.badge {
+  position: absolute;
+  top: -11px;
+  right: 25px;
+  padding: 6px 10px;
+  background: #f30129;
+  border-radius: 20px;
+}
+@media screen and (max-width: 680px) {
+  .badge {
+    top: -9px;
+    right: 3px;
+    padding: 4px 8px;
+  }
+  .redBtn {
+    justify-self: center;
+    width: 90%;
+  }
 }
