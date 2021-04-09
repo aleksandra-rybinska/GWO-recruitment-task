@@ -17,7 +17,7 @@ const Book = ({ book }) => {
       </p>
       <button
         onClick={() => addToCart(book)}
-        className={(styles.btn, buttons.redBtn)}
+        className={`${styles.btn} ${buttons.redBtn}`}
       >
         Dodaj do koszyka
       </button>

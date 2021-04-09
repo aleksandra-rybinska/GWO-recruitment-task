@@ -34,7 +34,7 @@ const CartBook = ({ book }) => {
         {book.currency}
       </p>
       <button
-        className={(styles.removeBtn, buttons.redBtn)}
+        className={`${styles.removeBtn} ${buttons.redBtn}`}
         onClick={() => removeFromCart(book.id)}
       >
         usuń produkt
