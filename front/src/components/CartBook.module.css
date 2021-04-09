@@ -24,6 +24,7 @@
   grid-area: description;
 }
 .description p {
+  margin: 0;
   padding-top: 7px;
 }
 .amountBtnContainer {
@@ -61,34 +62,6 @@
 }
 .removeBtn {
   grid-area: removeBtn;
-  justify-self: center;
-  align-self: center;
-  width: 215px;
-  height: 40px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  cursor: pointer;
-  border: none;
-  background-image: linear-gradient(
-    to left,
-    #750413,
-    #cf0437,
-    #f30129,
-    #dd1818
-  );
-  box-shadow: 0 3px 10px rgba(242, 97, 103, 0.3);
-  background-size: 300% 100%;
-  border-radius: 20px;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-.removeBtn:hover {
-  background-position: 100% 0;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
 }
 
 @media screen and (max-width: 680px) {
@@ -99,7 +72,7 @@
       "description buttons"
       "description price"
       "description img"
-      "removeBtn removeBtn";
+      "removeBtn img";
     margin: 0;
     padding: 10px;
   }
@@ -107,6 +80,7 @@
     max-height: 100px;
     width: auto;
     justify-self: center;
+    align-self: flex-start;
   }
   .amountBtns {
     justify-content: center;

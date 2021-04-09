@@ -1,6 +1,7 @@
 import "../../src/index.css";
 import { useBooks } from "../AppContext";
 import styles from "./Book.module.css";
+import buttons from "./Buttons.module.css";
 
 const Book = ({ book }) => {
   const { addToCart } = useBooks();
@@ -14,7 +15,10 @@ const Book = ({ book }) => {
       <p className={styles.price}>
         Cena: {(book.price / 100).toFixed(2)} {book.currency}
       </p>
-      <button onClick={() => addToCart(book)} className={styles.btn}>
+      <button
+        onClick={() => addToCart(book)}
+        className={(styles.btn, buttons.redBtn)}
+      >
         Dodaj do koszyka
       </button>
     </div>

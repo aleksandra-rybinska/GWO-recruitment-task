@@ -1,5 +1,6 @@
 import { useBooks } from "../AppContext";
 import styles from "./CartBook.module.css";
+import buttons from "./Buttons.module.css";
 
 const CartBook = ({ book }) => {
   const { addToCart } = useBooks();
@@ -26,7 +27,9 @@ const CartBook = ({ book }) => {
         Łącznie: {((book.quantity * book.price) / 100).toFixed(2)}{" "}
         {book.currency}
       </p>
-      <button className={styles.removeBtn}>usuń produkt</button>
+      <button className={(styles.removeBtn, buttons.redBtn)}>
+        usuń produkt
+      </button>
     </div>
   );
 };

@@ -1,0 +1,60 @@
+.redBtn {
+  justify-self: center;
+  align-self: center;
+  width: 215px;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  background-image: linear-gradient(
+    to left,
+    #750413,
+    #cf0437,
+    #f30129,
+    #dd1818
+  );
+  box-shadow: 0 3px 10px rgba(242, 97, 103, 0.3);
+  background-size: 300% 100%;
+  border-radius: 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.redBtn:hover {
+  background-position: 100% 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.navBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 215px;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  background-image: linear-gradient(
+    to right,
+    #2f1194,
+    #3383ec,
+    #0142f3,
+    #1892dd
+  );
+  box-shadow: 0 3px 10px rgba(242, 97, 103, 0.3);
+  background-size: 500% 100%;
+  border-radius: 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.navBtn:hover {
+  background-position: 100% 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}

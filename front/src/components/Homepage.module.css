@@ -1,0 +1,11 @@
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 20px 0;
+  padding: 5px 45px;
+  background: #fff;
+  box-shadow: 1px 3px 10px 0px rgba(50, 50, 69, 0.21);
+}

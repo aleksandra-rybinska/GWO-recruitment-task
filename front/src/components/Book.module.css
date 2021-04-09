@@ -14,10 +14,10 @@
   border-radius: 3px;
   box-shadow: 1px 3px 10px 0px rgba(50, 50, 69, 0.21);
 }
-h3 {
+.bookContainer h3 {
   margin: 0;
 }
-p {
+.bookContainer p {
   margin: 0;
 }
 .img {
@@ -42,33 +42,6 @@ p {
 
 .btn {
   grid-area: btn;
-  justify-self: center;
-  align-self: center;
-  width: 215px;
-  height: 40px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  cursor: pointer;
-  border: none;
-  background-image: linear-gradient(
-    to left,
-    #750413,
-    #cf0437,
-    #f30129,
-    #dd1818
-  );
-  box-shadow: 0 3px 10px rgba(242, 97, 103, 0.3);
-  background-size: 300% 100%;
-  border-radius: 20px;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.btn:hover {
-  background-position: 100% 0;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
 }
 
 @media screen and (max-width: 680px) {
